@@ -1,0 +1,106 @@
+:root {
+    --root-padding: 50px;
+    --root-margin: 50px;
+    font-size: 25px;
+}
+
+header {
+    padding-top: 30px;
+}
+
+.logo {
+    --size: 100px;
+    margin-right: 30px;
+}
+
+header .title,
+footer .title {
+    font-size: 30px;
+}
+
+.call-button {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100px;
+    color: var(--accent-color);
+}
+
+.call-button:before {
+    content: none;
+}
+
+header .toggle-menu {
+    display: none;
+}
+
+aside {
+    all: initial;
+}
+
+aside nav {
+    all: initial;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--root-padding);
+}
+
+aside a {
+    all: initial;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+footer {
+    margin-top: calc(25vw - var(--root-padding));
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+footer > div:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer:before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    left: 0;
+    right: 0;
+    top: -20vw;
+    /*width: 100vw;*/
+    height: 25vw;
+    background-image: url("footer-decoration.svg");
+    background-size: calc(100% + 2px);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+footer > div:first-child {
+    margin: unset;
+    align-items: center;
+    min-width: calc(40vw - var(--root-padding) - 25px);
+}
+
+footer > div:last-child {
+    width: 100%;
+    margin-left: 50px;
+}
+
+footer > div:last-child > div {
+    max-width: calc(60vw / 3);
+    margin-bottom: unset;
+}
+
+main h1 {
+    font-size: 40px;
+}
+
+main img {
+    all: initial;
+    width: 100%;
+}
