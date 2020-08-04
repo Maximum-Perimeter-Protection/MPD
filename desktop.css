@@ -1,6 +1,6 @@
 :root {
-    --root-padding: 50px;
-    --calculated-root-horizontal-padding: calc(((100vw - 1024px) / 2) + 50px);
+    --root-padding: 30px;
+    --calculated-root-horizontal-padding: calc(((100vw - 1024px) / 2) + var(--root-padding));
     --root-margin: 50px;
     font-size: 25px;
 }
@@ -21,7 +21,6 @@ footer .title {
 }
 
 .call-button {
-    font-weight: bold;
     font-size: 40px;
     line-height: 100px;
     color: black;
@@ -43,7 +42,7 @@ aside nav {
     all: initial;
     display: flex;
     justify-content: space-between;
-    padding: 0 calc(((100vw - 1024px) / 2) + 50px);
+    padding: 0 var(--calculated-root-horizontal-padding);
 }
 
 aside a {
