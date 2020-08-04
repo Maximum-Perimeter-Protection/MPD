@@ -1,10 +1,12 @@
 :root {
     --root-padding: 50px;
+    --calculated-root-horizontal-padding: calc(((100vw - 1024px) / 2) + 50px);
     --root-margin: 50px;
     font-size: 25px;
 }
 
 header {
+    padding: var(--root-padding) var(--calculated-root-horizontal-padding);
     padding-top: 30px;
 }
 
@@ -22,7 +24,7 @@ footer .title {
     font-weight: bold;
     font-size: 40px;
     line-height: 100px;
-    color: var(--accent-color);
+    color: black;
 }
 
 .call-button:before {
@@ -41,18 +43,19 @@ aside nav {
     all: initial;
     display: flex;
     justify-content: space-between;
-    padding: 0 var(--root-padding);
+    padding: 0 calc(((100vw - 1024px) / 2) + 50px);
 }
 
 aside a {
     all: initial;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
-    color: var(--accent-color);
+    color: #636363;
 }
 
 footer {
     margin-top: calc(25vw - var(--root-padding));
+    padding: 30px var(--calculated-root-horizontal-padding);
     padding-top: 0;
     flex-direction: row;
     justify-content: space-between;
@@ -83,17 +86,26 @@ footer:before {
 footer > div:first-child {
     margin: unset;
     align-items: center;
-    min-width: calc(40vw - var(--root-padding) - 25px);
+    min-width: calc(50vw - var(--calculated-root-horizontal-padding) - 30px);
 }
 
 footer > div:last-child {
     width: 100%;
-    margin-left: 50px;
+    /*margin-left: 30px;*/
 }
 
 footer > div:last-child > div {
-    max-width: calc(60vw / 3);
+    max-width: calc((50vw - var(--calculated-root-horizontal-padding) + 120px) / 3);
     margin-bottom: unset;
+}
+
+footer > div:last-child > div > span:not(:first-child) {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+main {
+    padding: var(--root-padding) var(--calculated-root-horizontal-padding);
 }
 
 main h1 {
