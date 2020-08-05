@@ -6,6 +6,12 @@
     font-family: Helvetica, sans-serif;
 }
 
+@media (min-width: 375px) {
+    :root {
+        --root-padding: 20px;
+    }
+}
+
 a {
     all: unset;
     color: var(--accent-color);
@@ -79,7 +85,7 @@ footer .title {
     height: 100%;
 }
 
-.call-button:before{
+.call-button:before {
     content: '📞';
     display: inline-block;
     /*color: transparent;*/
@@ -182,7 +188,7 @@ main {
     display: none;
 }
 
-.breadcrumbs a{
+.breadcrumbs a {
     color: black;
     opacity: .5;
 }
@@ -207,4 +213,82 @@ main h1 {
 main img {
     margin-left: calc(var(--root-padding) * -1);
     width: 100vw;
+}
+
+.offers-slider {
+    margin-left: calc(var(--root-padding) * -1);
+    width: 100vw;
+    margin-bottom: var(--root-margin);
+}
+
+.offers-slider .slide {
+    position: relative;
+}
+
+.offers-slider .slide img {
+    all: initial;
+    width: 100%;
+}
+
+.offers-slider .slide .content {
+    position: absolute;
+    color: white;
+    bottom: var(--root-padding);
+    left: var(--root-padding);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.offers-slider .slide .content span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    /*font-size: 16px;*/
+    margin: var(--root-margin) 0;
+}
+
+.article-cover {
+    position: relative;
+    /*margin: var(--root-padding) 0;*/
+    margin-left: calc(var(--root-padding) * -1);
+    width: 100vw;
+}
+
+.article-cover img {
+    all: initial;
+    width: 100%;
+}
+
+.article-cover span {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 20px;
+    width: calc(100% - (var(--root-padding) * 2));
+    padding: var(--root-padding);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+
+.button {
+    background-color: var(--accent-color);
+    font-size: 18px;
+    padding: 5px 20px;
+    color: var(--second-color);
+    align-self: flex-end;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about span {
+    color: var(--accent-color);
+    font-size: 20px;
+    font-weight: bold;
 }
