@@ -115,3 +115,62 @@ main img {
     all: initial;
     width: 100%;
 }
+
+.offers-slider {
+    all: initial;
+    width: 100%;
+    margin-bottom: var(--root-margin);
+}
+
+.offers-slider .slide .content {
+    left: var(--root-margin);
+    bottom: var(--root-margin);
+}
+
+.offers-slider .slide .content span {
+    font-size: 50px;
+}
+
+.articles-preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articles-preview .article {
+    width: calc((100% - var(--root-margin)) / 2);
+}
+
+.articles-preview .article:nth-child(1),
+.articles-preview .article:nth-child(2) {
+    margin-bottom: unset;
+}
+
+.article {
+    font-size: 20px;
+}
+
+.article-cover {
+    all: initial;
+    position: relative;
+    width: 100%;
+}
+
+.article-cover span {
+    /*width: 100%;*/
+    text-align: center;
+    font-size: 30px;
+    width: calc(100% - (var(--root-padding) * 2));
+}
+
+.button {
+    font-size: 24px;
+}
+
+.about {
+    display: initial;
+}
+
+.about span {
+    font-size: 40px;
+}

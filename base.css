@@ -267,9 +267,9 @@ main img {
     color: white;
     font-size: 20px;
     font-weight: bold;
-    bottom: 20px;
+    bottom: var(--root-padding);
     width: calc(100% - (var(--root-padding) * 2));
-    padding: var(--root-padding);
+    padding: 5px var(--root-padding);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
 }
