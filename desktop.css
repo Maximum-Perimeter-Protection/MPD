@@ -38,18 +38,27 @@ aside {
     all: initial;
 }
 
-aside nav {
+aside nav, aside nav details {
     all: initial;
     display: flex;
     justify-content: space-between;
     padding: 0 var(--calculated-root-horizontal-padding);
 }
 
-aside a {
+aside nav details {
+    padding: unset;
+}
+
+aside a, aside details summary {
     all: initial;
     font-size: 25px;
     font-weight: bold;
     color: #636363;
+}
+
+aside details a {
+    padding-top: 20px;
+    margin-left: initial;
 }
 
 footer {

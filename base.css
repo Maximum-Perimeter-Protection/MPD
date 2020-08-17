@@ -167,16 +167,20 @@ aside {
     display: initial;
 }
 
-aside nav {
+aside nav, aside nav details {
     display: flex;
     flex-direction: column;
 }
 
-aside a {
+aside a, aside details summary {
     color: var(--second-color);
     font-size: 30px;
     padding-bottom: var(--root-margin);
     font-weight: bold;
+}
+
+aside details a {
+    margin-left: var(--root-margin);
 }
 
 main {
